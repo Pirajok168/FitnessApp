@@ -19,4 +19,4 @@ include(":androidApp")
 include(":lib:shared")
 include(":lib:ios-framework")
 
-include(":lib:features:authorization")
+include(":lib:features:authorization", ":lib:features:authorization:data", ":lib:features:authorization:domain")

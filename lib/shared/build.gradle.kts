@@ -28,7 +28,13 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                //put your multiplatform dependencies here
+                implementation(libs.kodein.di)
+                implementation(libs.ktor.client.core)
+                implementation(libs.ktor.client.serialization)
+                implementation(libs.ktor.client.content.negotiation)
+                implementation(libs.ktor.serialization.kotlinx.json)
+
+
 //                implementation(libs.kotlin.coroutines)
 //                implementation(libs.kotlin.datetime)
 //
@@ -37,7 +43,6 @@ kotlin {
 //                implementation(libs.ktor.client.content.negotiation)
 //                implementation(libs.ktor.serialization.kotlinx.json)
 //
-//                implementation(libs.kodein.di)
 //
 //                implementation(libs.app.cash.primitive.adapters)
             }
@@ -52,10 +57,13 @@ kotlin {
             implementation(libs.compose.ui.tooling.preview)
             implementation(libs.compose.material3)
             implementation(libs.androidx.activity.compose)
-          //  implementation(libs.ktor.okhttp)
+            implementation(libs.ktor.okhttp)
           //  implementation(libs.app.cash.android.driver)
         }
 
+        iosMain.dependencies {
+            implementation(libs.ktor.client.ios)
+        }
 
     }
 }
