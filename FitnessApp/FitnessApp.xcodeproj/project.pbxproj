@@ -11,6 +11,8 @@
 		29DE70A12BF4E8BF00464FBE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE70A02BF4E8BF00464FBE /* ContentView.swift */; };
 		29DE70A32BF4E8C000464FBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29DE70A22BF4E8C000464FBE /* Assets.xcassets */; };
 		29DE70A62BF4E8C000464FBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29DE70A52BF4E8C000464FBE /* Preview Assets.xcassets */; };
+		29DE70C12BF4FFF200464FBE /* AuthorizationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE70C02BF4FFF200464FBE /* AuthorizationScreen.swift */; };
+		29DE70C32BF5006D00464FBE /* LocalAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE70C22BF5006D00464FBE /* LocalAuthViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		29DE70A02BF4E8BF00464FBE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		29DE70A22BF4E8C000464FBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29DE70A52BF4E8C000464FBE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		29DE70C02BF4FFF200464FBE /* AuthorizationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationScreen.swift; sourceTree = "<group>"; };
+		29DE70C22BF5006D00464FBE /* LocalAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuthViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 		29DE709D2BF4E8BF00464FBE /* FitnessApp */ = {
 			isa = PBXGroup;
 			children = (
+				29DE70B92BF4FFA700464FBE /* features */,
 				29DE709E2BF4E8BF00464FBE /* FitnessAppApp.swift */,
 				29DE70A02BF4E8BF00464FBE /* ContentView.swift */,
 				29DE70A22BF4E8C000464FBE /* Assets.xcassets */,
@@ -67,6 +72,39 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		29DE70B92BF4FFA700464FBE /* features */ = {
+			isa = PBXGroup;
+			children = (
+				29DE70BA2BF4FFB000464FBE /* authorization */,
+			);
+			path = features;
+			sourceTree = "<group>";
+		};
+		29DE70BA2BF4FFB000464FBE /* authorization */ = {
+			isa = PBXGroup;
+			children = (
+				29DE70BC2BF4FFC100464FBE /* ui */,
+				29DE70BB2BF4FFBA00464FBE /* viewmodel */,
+			);
+			path = authorization;
+			sourceTree = "<group>";
+		};
+		29DE70BB2BF4FFBA00464FBE /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				29DE70C22BF5006D00464FBE /* LocalAuthViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		29DE70BC2BF4FFC100464FBE /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				29DE70C02BF4FFF200464FBE /* AuthorizationScreen.swift */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +112,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29DE70A92BF4E8C000464FBE /* Build configuration list for PBXNativeTarget "FitnessApp" */;
 			buildPhases = (
+				29DE70B52BF4FEB200464FBE /* ShellScript */,
 				29DE70972BF4E8BF00464FBE /* Sources */,
 				29DE70982BF4E8BF00464FBE /* Frameworks */,
 				29DE70992BF4E8BF00464FBE /* Resources */,
@@ -132,11 +171,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		29DE70B52BF4FEB200464FBE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd \"$SRCROOT/..\"\n./gradlew :lib:ios-framework:embedAndSignAppleFrameworkForXcode\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		29DE70972BF4E8BF00464FBE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29DE70C32BF5006D00464FBE /* LocalAuthViewModel.swift in Sources */,
+				29DE70C12BF4FFF200464FBE /* AuthorizationScreen.swift in Sources */,
 				29DE70A12BF4E8BF00464FBE /* ContentView.swift in Sources */,
 				29DE709F2BF4E8BF00464FBE /* FitnessAppApp.swift in Sources */,
 			);
@@ -272,7 +333,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FitnessApp/Preview Content\"";
+				DEVELOPMENT_TEAM = J5HJ4663N7;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../lib/ios-framework/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -301,6 +365,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FitnessApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../lib/ios-framework/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

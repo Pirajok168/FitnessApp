@@ -1,15 +1,24 @@
-//
-//  AuthorizationScreen.swift
-//  FitnessApp
-//
-//  Created by Данила Еремин on 15.05.2024.
-//
-
 import SwiftUI
+import fitness
 
 struct AuthorizationScreen: View {
+    @StateObject var viewModel: LocalAuthorizationViewModel = LocalAuthorizationViewModel()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            TextField("Логин", text: $viewModel.login)
+                .textFieldStyle(.roundedBorder)
+                .onChange(of: viewModel.login){ oldText, newText in
+                    viewModel.obtainEvent(viewEvent: AuthorizationEvents.InputLogin(value: newText))
+                }
+                
+            
+            TextField("Пароль", text: $viewModel.password)
+                .textFieldStyle(.roundedBorder)
+                .onChange(of: viewModel.password){ oldText, newText in
+                    viewModel.obtainEvent(viewEvent: AuthorizationEvents.InputPassword(value: newText))
+                }
+                
+        }
     }
 }
 
