@@ -13,6 +13,9 @@
 		29DE70A62BF4E8C000464FBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29DE70A52BF4E8C000464FBE /* Preview Assets.xcassets */; };
 		29DE70C12BF4FFF200464FBE /* AuthorizationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE70C02BF4FFF200464FBE /* AuthorizationScreen.swift */; };
 		29DE70C32BF5006D00464FBE /* LocalAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE70C22BF5006D00464FBE /* LocalAuthViewModel.swift */; };
+		29DE70C92BF898FD00464FBE /* AuthorizationNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE70C82BF898FD00464FBE /* AuthorizationNavigation.swift */; };
+		29DE70CB2BF8A5F300464FBE /* AuthorizationEnterLoginPasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE70CA2BF8A5F300464FBE /* AuthorizationEnterLoginPasswordScreen.swift */; };
+		29DE70CD2BF8A7B800464FBE /* AuthorizationEnterLoginPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE70CC2BF8A7B800464FBE /* AuthorizationEnterLoginPasswordViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		29DE70A52BF4E8C000464FBE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		29DE70C02BF4FFF200464FBE /* AuthorizationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationScreen.swift; sourceTree = "<group>"; };
 		29DE70C22BF5006D00464FBE /* LocalAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuthViewModel.swift; sourceTree = "<group>"; };
+		29DE70C82BF898FD00464FBE /* AuthorizationNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationNavigation.swift; sourceTree = "<group>"; };
+		29DE70CA2BF8A5F300464FBE /* AuthorizationEnterLoginPasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationEnterLoginPasswordScreen.swift; sourceTree = "<group>"; };
+		29DE70CC2BF8A7B800464FBE /* AuthorizationEnterLoginPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationEnterLoginPasswordViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 		29DE70BA2BF4FFB000464FBE /* authorization */ = {
 			isa = PBXGroup;
 			children = (
+				29DE70C72BF898E300464FBE /* navigation */,
 				29DE70BC2BF4FFC100464FBE /* ui */,
 				29DE70BB2BF4FFBA00464FBE /* viewmodel */,
 			);
@@ -93,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				29DE70C22BF5006D00464FBE /* LocalAuthViewModel.swift */,
+				29DE70CC2BF8A7B800464FBE /* AuthorizationEnterLoginPasswordViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -101,8 +109,17 @@
 			isa = PBXGroup;
 			children = (
 				29DE70C02BF4FFF200464FBE /* AuthorizationScreen.swift */,
+				29DE70CA2BF8A5F300464FBE /* AuthorizationEnterLoginPasswordScreen.swift */,
 			);
 			path = ui;
+			sourceTree = "<group>";
+		};
+		29DE70C72BF898E300464FBE /* navigation */ = {
+			isa = PBXGroup;
+			children = (
+				29DE70C82BF898FD00464FBE /* AuthorizationNavigation.swift */,
+			);
+			path = navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +213,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29DE70CD2BF8A7B800464FBE /* AuthorizationEnterLoginPasswordViewModel.swift in Sources */,
+				29DE70C92BF898FD00464FBE /* AuthorizationNavigation.swift in Sources */,
+				29DE70CB2BF8A5F300464FBE /* AuthorizationEnterLoginPasswordScreen.swift in Sources */,
 				29DE70C32BF5006D00464FBE /* LocalAuthViewModel.swift in Sources */,
 				29DE70C12BF4FFF200464FBE /* AuthorizationScreen.swift in Sources */,
 				29DE70A12BF4E8BF00464FBE /* ContentView.swift in Sources */,

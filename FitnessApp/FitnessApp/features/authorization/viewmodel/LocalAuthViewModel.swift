@@ -2,21 +2,20 @@ import Foundation
 import fitness
 
 class LocalAuthorizationViewModel: ObservableObject {
-    private(set) var viewModel: AuthorizationViewModel = AuthorizationViewModel()
+    private(set) var viewModel: AuthorizationEnterPhoneViewModel = AuthorizationEnterPhoneViewModel()
     
-    @Published var login: String = ""
+    @Published var numberPhone: String = ""
     
-    @Published var password: String = ""
+
     
     init(){
         viewModel.viewStates().watch { [weak self] viewState in
             guard let self = self else { return }
-            self.login = viewState.login
-            self.password = viewState.password
+            self.numberPhone = viewState.numberPhone
         }
     }
     
-    func obtainEvent(viewEvent: AuthorizationEvents){
+    func obtainEvent(viewEvent: AuthorizationEnterPhoneEvents){
         viewModel.obtainEvent(viewEvent: viewEvent)
     }
 }
