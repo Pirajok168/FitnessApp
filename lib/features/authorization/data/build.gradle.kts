@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
+    kotlin(libs.plugins.kotlinSerialization.get().pluginId)
 }
 
 
@@ -28,7 +29,9 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation(projects.lib.shared)
+                api(projects.lib.shared)
+                implementation(libs.kotlinx.serialization)
+                implementation(libs.kodein.di)
             }
         }
 

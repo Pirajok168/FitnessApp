@@ -28,8 +28,8 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation(projects.lib.shared)
-                implementation(projects.lib.features.authorization.data)
+                api(projects.lib.features.authorization.data)
+                implementation(libs.kodein.di)
             }
         }
 

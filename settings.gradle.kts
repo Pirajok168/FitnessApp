@@ -18,5 +18,6 @@ rootProject.name = "FitnessApp"
 include(":androidApp")
 include(":lib:shared")
 include(":lib:ios-framework")
+include(":lib:designsystem")
 
 include(":lib:features:authorization", ":lib:features:authorization:data", ":lib:features:authorization:domain")

@@ -27,14 +27,9 @@ kotlin {
 
     sourceSets {
         val commonMain by getting {
-            dependencies {
-                api(projects.lib.features.authorization.domain)
-                implementation(libs.kviewmodel)
-                implementation(libs.kodein.di)
-            }
+            dependencies {}
         }
         androidMain.dependencies {
-            implementation(projects.lib.designsystem)
             implementation(libs.compose.ui)
             implementation(libs.compose.foundation)
             implementation(libs.compose.ui.tooling.preview)
@@ -49,7 +44,7 @@ kotlin {
 }
 
 android {
-    namespace = "ru.fitness.mobile.authorization"
+    namespace = "ru.fitness.mobile.designsystem"
     compileSdk = 34
     defaultConfig {
         minSdk = 26

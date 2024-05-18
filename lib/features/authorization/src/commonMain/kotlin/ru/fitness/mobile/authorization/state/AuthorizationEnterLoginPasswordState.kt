@@ -1,6 +1,6 @@
 package ru.fitness.mobile.authorization.state
 
-data class AuthorizationState(
+data class AuthorizationEnterLoginPasswordState(
     val login: String = "",
     val password: String = ""
 )

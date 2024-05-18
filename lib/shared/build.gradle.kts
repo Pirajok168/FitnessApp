@@ -2,7 +2,6 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
     kotlin(libs.plugins.kotlinSerialization.get().pluginId)
-    // id(libs.plugins.sqldelightPlugin.get().pluginId)
 }
 
 kotlin {

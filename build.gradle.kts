@@ -10,6 +10,7 @@ plugins {
 
 buildscript {
     dependencies {
+        classpath(libs.kotlinx.serialization)
         classpath(libs.kotlin.serialization)
     }
 }

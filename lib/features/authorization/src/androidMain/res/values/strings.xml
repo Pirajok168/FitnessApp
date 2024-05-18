@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="auth_screen_title">Введите номер телефона</string>
+    <string name="auth_screen_enter_login_title">Авторизация</string>
+    <string name="auth_screen_subtitle">Чтобы войти/зарегистрироваться в приложении</string>
+    <string name="auth_screen_enter_login_subtitle">Введите логин, который вы использовали при регистрации в мобильном приложении</string>
+    <string name="number_phone">Номер телефона</string>
+    <string name="resume">Продолжить</string>
+    <string name="another_enter">Другой способ входа</string>
+    <string name="registration">Регистрация</string>
+    <string name="enter">Войти</string>
+</resources>
