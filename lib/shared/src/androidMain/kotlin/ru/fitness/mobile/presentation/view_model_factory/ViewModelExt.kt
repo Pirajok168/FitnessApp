@@ -1,4 +1,4 @@
-package ru.fitness.mobile.view_model_factory
+package ru.fitness.mobile.presentation.view_model_factory
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisallowComposableCalls

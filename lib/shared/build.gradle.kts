@@ -57,6 +57,7 @@ kotlin {
             implementation(libs.compose.material3)
             implementation(libs.androidx.activity.compose)
             implementation(libs.ktor.okhttp)
+            implementation(libs.androidx.navigation)
           //  implementation(libs.app.cash.android.driver)
         }
 

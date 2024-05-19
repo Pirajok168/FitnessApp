@@ -1,4 +1,4 @@
-package ru.fitness.mobile.compose
+package ru.fitness.mobile.presentation.compose
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.size

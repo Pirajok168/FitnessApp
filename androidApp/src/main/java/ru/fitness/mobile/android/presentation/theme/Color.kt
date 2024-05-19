@@ -1,4 +1,4 @@
-package ru.fitness.mobile.android.presentation
+package ru.fitness.mobile.android.presentation.theme
 import androidx.compose.ui.graphics.Color
 
 val primaryLight = Color(0xFF236A4C)

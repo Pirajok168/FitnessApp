@@ -20,7 +20,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import ru.fitness.mobile.authorization.R
 import ru.fitness.mobile.authorization.viewmodel.AuthorizationEnterPhoneViewModel
-import ru.fitness.mobile.compose.Spacing
+import ru.fitness.mobile.presentation.compose.Spacing
 import ru.fitness.mobile.designsystem.buttons.Button
 import ru.fitness.mobile.designsystem.buttons.ButtonStyle
 import ru.fitness.mobile.designsystem.icon.toIcon
